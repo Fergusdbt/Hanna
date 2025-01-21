@@ -1,0 +1,152 @@
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+#large_logo {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#small_logo {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.centered {
+  width: 25%;
+  padding: 5px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: 'Courier New';
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.btn-green {
+  color: white;
+  background-color: #639c66;
+}
+
+.btn-green:hover {
+  color: white;
+  background-color: #538c56;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #6ec3d2;
+}
+
+.btn-blue:hover {
+  color: white;
+  background-color: #5eb3c2;
+}
+
+#user {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.container-fluid {
+  width: 85%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.app-link {
+  color: black;
+  text-decoration: none;
+}
+
+.app-link:hover img.app-icon {
+  position: relative;
+  animation-name: grow;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.app-icon {
+  width: 65%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1098px) {
+  #small_logo {
+    width: 35%;
+  }
+
+  .centered {
+    width: 40%;
+  }
+
+  .app-icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  #small_logo {
+    width: 50%;
+  }
+
+  .centered {
+    width: 50%;
+  }
+
+  .app-icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 750px) {
+  #large_logo {
+    width: 75%;
+  }
+
+  #small_logo {
+    width: 75%;
+  }
+
+  .centered {
+    width: 75%;
+  }
+
+  .app-icon {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,66 @@
+{% extends "invites/layout.html" %}
+
+{% block body %}
+
+<!-- Invites title -->
+<h2 class="centered">Invites</h2>
+
+<!-- Page views -->
+<div class="centered">
+    <button class="btn btn-outline-secondary" id="inbox">Inbox</button>
+    <button class="btn btn-outline-secondary" id="outbox">Outbox</button>
+    <button class="btn btn-outline-secondary" id="send">Send</button>
+    <button class="btn btn-outline-secondary" id="friends">Friends</button>
+</div>
+
+<!-- Inbox view -->
+<div id="inbox-view">
+</div>
+
+<!-- Outbox view -->
+<div id="outbox-view">
+</div>
+
+<!-- Send view -->
+<div id="send-view">
+    <h4 class="centered">Send Invite</h4>
+    <form id="send-form">
+        {% csrf_token %}
+        <div class="form-group centered">
+            From: <input disabled id="sender" name="sender" value="{{ request.user.email }}">
+        </div>
+        <div class="form-group centered">
+            <label for="recipients">Select recipients:</label>
+            <select class="custom-select" id="recipients" name="recipients" multiple size="3">
+            </select>
+        </div>
+        <div class="form-group centered">
+            <label for="event">Select event:</label>
+            <select class="custom-select" id="event" name="event">
+            </select>
+        </div>
+        <div class="form-group centered">
+            <textarea id="details" placeholder="Add event details here..." maxlength="400" rows="4"></textarea>
+        </div>
+        <div class="form-group centered">
+            <input type="submit" class="btn btn-green">
+        </div>
+    </form>
+</div>
+
+<!-- Friends view -->
+<div id="friends-view">
+    <div id="friend-requests">
+    </div>
+    <h4 class="centered">Friends List</h4>
+    <div id="friends-list">
+    </div>
+    <h4 class="centered">Add friend</h4>
+    <form class="form-group centered" id="search-form">
+        <input autocomplete="off" class="form-group centered" type="text" id="search-user" name="search-user" placeholder="Search users here...">
+    </form>
+    <div id="search-results">
+    </div>
+</div>
+
+{% endblock %}

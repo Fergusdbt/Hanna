@@ -1,0 +1,241 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#home {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#user {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.btn-logout {
+  height: 40px;
+  color: #f34f2f;
+  background-color: white;
+  border: solid 1px #f34f2f;
+}
+
+.btn-logout:hover {
+  height: 40px;
+  color: white;
+  background-color: #f34f2f;
+  border: solid 1px white;
+}
+
+.centered {
+  width: 50%;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New';
+}
+
+#inbox, #outbox, #send, #friends  {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inbox-view, #outbox-view, #send-view, #friends-view  {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+}
+
+.mail {
+  width: 90%;
+  font-size: 20px;
+  font-family: 'Courier New';
+  border: solid 1px grey;
+  padding: 10px;
+}
+
+#checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+#accepted {
+  background-color: #73ac76;
+}
+
+#pending {
+  background-color: #f3fcf6;
+}
+
+.form-group {
+  font-family: 'Courier New';
+}
+
+#sender, .custom-select {
+  margin: 10px;
+}
+
+#recipients {
+  width: 200px;
+}
+
+#event {
+  width: 300px;
+}
+
+#details {
+  width: 100%;
+}
+
+.btn-green {
+  color: white;
+  background-color: #639c66;
+}
+
+.btn-green:hover {
+  color: white;
+  background-color: #538c56;
+}
+
+.btn-red {
+  color: white;
+  background-color: #f34f2f;
+}
+
+.btn-red:hover {
+  color: white;
+  background-color: #e33f1f;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #6ec3d2;
+}
+
+.btn-blue:hover {
+  color: white;
+  background-color: #5eb3c2;
+}
+
+.request {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  font-family: 'Courier New';
+}
+
+.request .row {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px;
+}
+
+.request hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.request button{
+  font-size: 12px;
+  padding: 5px;
+}
+
+.btn-red {
+  color: white;
+  background-color: #f34f2f;
+}
+
+.btn-red:hover {
+  color: white;
+  background-color: #e33f1f;
+}
+
+.name {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  font-family: 'Courier New';
+}
+
+.name .row {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.name hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.name .col-3 {
+  font-size: 12px;
+}
+
+#friends-list {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#remove_friend {
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+@media (max-width: 915px) {
+  #home {
+    height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .centered {
+    width: 90%;
+  }
+
+  .mail .col-5 {
+    font-size: 15px;
+  }
+
+  .mail .col-2, .mail .col-3, .mail .col-12 {
+    font-size: 11px;
+  }
+
+  .request {
+    width: 90%;
+  }
+
+  .name {
+    width: 60%;
+  }
+}

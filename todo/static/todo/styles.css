@@ -1,0 +1,231 @@
+@keyframes delete {
+  0% {
+    opacity: 1;
+    max-height: 50px;
+  }
+  50% {
+    opacity: 0;
+    max-height: 50px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0px;
+  }
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#home {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#user {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+h2 {
+  font-family: 'Courier New';
+}
+
+.centered {
+  width: 40%;
+  padding: 5px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-logout {
+  height: 40px;
+  color: #f34f2f;
+  background-color: white;
+  border: solid 1px #f34f2f;
+}
+
+.btn-logout:hover {
+  height: 40px;
+  color: white;
+  background-color: #f34f2f;
+  border: solid 1px white;
+}
+
+.btn-green {
+  color: white;
+  background-color: #639c66;
+}
+
+.btn-green:hover {
+  color: white;
+  background-color: #538c56;
+}
+
+.btn-red {
+  color: white;
+  background-color: #f34f2f;
+}
+
+.btn-red:hover {
+  color: white;
+  background-color: #e33f1f;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #6ec3d2;
+}
+
+.btn-blue:hover {
+  color: white;
+  background-color: #5eb3c2;
+}
+
+.form-control, .custom-select {
+  margin: 5px;
+}
+
+.form-inline {
+  font-family: 'Courier New';
+}
+
+.messages {
+  height: 5px;
+  font-family: 'Courier New';
+}
+
+.error {
+  color: red;
+}
+
+.container-fluid {
+  width: 85%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.container-fluid .row {
+  animation-name: delete;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.col-3 {
+  display: flex;
+  align-items: center;
+}
+
+.col-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.col-1 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 40px;
+  max-width: 40px;
+  font-size: 30px;
+}
+
+.col-7 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_fields, .edit_deadline {
+  display: flex;
+  align-items: center;
+  font-family: 'Courier New';
+}
+
+.edit_action {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.cancel {
+  margin: 10px;
+}
+
+@media (max-width: 1200px) {
+  .centered {
+    width: 50%;
+  }
+
+  .container-fluid h2 {
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .col-1 button {
+    max-height: 30px;
+    max-width: 30px;
+    font-size: 20px;
+  }
+
+  .edit_action {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .edit_deadline {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 1066px) {
+  .centered {
+    width: 60%;
+  }
+
+  .container-fluid h2 {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .col-1 h2 {
+    font-size: 0px;
+  }
+
+  .col-1 button {
+    max-height: 20px;
+    max-width: 20px;
+  }
+
+  .col-7 button {
+    max-height: 20px;
+    max-width: 20px;
+    font-size: 7px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 750px) {
+  #home {
+    height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .centered {
+    width: 85%;
+  }
+
+  .container-fluid .row {
+    padding-bottom: 70px;
+  }
+}

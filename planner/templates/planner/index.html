@@ -1,0 +1,489 @@
+{% extends "planner/layout.html" %}
+
+{% block body %}
+
+<!-- Calendar title -->
+<h2 class="centered" id="month"></h2>
+
+<!-- Month selectors -->
+ <div class="centered">
+    <button class="btn btn-outline-secondary" id="previous-year"></button>
+    <span></span>
+    <button class="btn btn-outline-secondary" id="month-1">JAN</button>
+    <button class="btn btn-outline-secondary" id="month-2">FEB</button>
+    <button class="btn btn-outline-secondary" id="month-3">MAR</button>
+    <button class="btn btn-outline-secondary" id="month-4">APR</button>
+    <button class="btn btn-outline-secondary" id="month-5"> MAY</button>
+    <button class="btn btn-outline-secondary" id="month-6">JUN</button>
+    <button class="btn btn-outline-secondary" id="month-7">JUL</button>
+    <button class="btn btn-outline-secondary" id="month-8">AUG</button>
+    <button class="btn btn-outline-secondary" id="month-9">SEP</button>
+    <button class="btn btn-outline-secondary" id="month-10">OCT</button>
+    <button class="btn btn-outline-secondary" id="month-11">NOV</button>
+    <button class="btn btn-outline-secondary" id="month-12">DEC</button>
+    <span></span>
+    <button class="btn btn-outline-secondary" id="next-year"></button>
+</div>
+
+<!-- Calendar view -->
+<div class="container grid" id="weekdays">
+    <div class="row" >
+        <div class="col centered">
+            MON
+        </div>
+        <div class="col centered">
+            TUE
+        </div>
+        <div class="col centered">
+            WED
+        </div>
+        <div class="col centered">
+            THU
+        </div>
+        <div class="col centered">
+            FRI
+        </div>
+        <div class="col centered">
+            SAT
+        </div>
+        <div class="col centered">
+            SUN
+        </div>
+    </div>
+</div>
+<div class="container grid" id="calendar">
+    <div class="row" >
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="col" id="weekend">
+            <div class="header">
+            </div>
+            <div class="date">
+            </div>
+            <div class="body">
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

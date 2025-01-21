@@ -1,0 +1,39 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+
+    <!-- Logo image -->
+    <img src="{% static 'home/hanna.png' %}" id="small_logo" alt="Hanna logo">
+
+    <!-- Navigation links -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <a class="app-link" href="{% url 'todo:index' %}">
+                    <img src="{% static 'todo/todo.png' %}" class="app-icon" alt="To Do List icon">
+                    <h2 class="app-icon">To Do List</h2>
+                </a>
+            </div>
+
+            <div class="col">
+                <a class="app-link" href="{% url 'planner:index' %}">
+                    <img src="{% static 'planner/planner.png' %}" class="app-icon" alt="Planner icon">
+                    <h2 class="app-icon">Calendar</h2>
+                </a>
+            </div>
+
+            <div class="col">
+                <a class="app-link" href="{% url 'invites:index' %}">
+                    <img src="{% static 'invites/invites.png' %}" class="app-icon" alt="Invites icon">
+                    <h2 class="app-icon">Invites</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

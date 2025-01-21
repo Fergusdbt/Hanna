@@ -1,0 +1,236 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#home {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#user {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.btn-logout {
+  height: 40px;
+  color: #f34f2f;
+  background-color: white;
+  border: solid 1px #f34f2f;
+}
+
+.btn-logout:hover {
+  height: 40px;
+  color: white;
+  background-color: #f34f2f;
+  border: solid 1px white;
+}
+
+h2 {
+  font-family: 'Courier New';
+}
+
+.centered {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  font-family: 'Courier New';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered span {
+  display: flex;
+  flex-grow: 1;
+  min-width: 5px;
+}
+
+#previous-year {
+  height: 38px;
+  line-height: 19px;
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#next-year {
+  height: 38px;
+  line-height: 19px;
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto, auto, auto, auto, auto, auto, auto;
+  font-family: 'Courier New';
+}
+
+#weekdays {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9999;
+}
+
+#calendar {
+  height: 710px;
+  margin-bottom: 10px;
+  position: relative;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+}
+
+#calendar .col {
+  display: flex;
+  position: relative;
+}
+
+#weekend {
+  background: #F7F7F7;
+}
+
+.header {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding-right: 40px;
+  font-size: 13px;
+  line-height: 12px;
+}
+
+.date {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+}
+
+.body {
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  padding-right: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 2px;
+  left: 5px;
+  padding-right: 2px;
+  font-size: 13px;
+  line-height: 12px;
+}
+
+@media (max-width: 992px) {
+  .centered button {
+    font-size: 15px;
+  }
+
+  #previous-year {
+    line-height: 15px;
+  }
+
+  #next-year {
+    line-height: 15px;
+  }
+
+  .header {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .date {
+    font-size: 25px;
+  }
+
+  .body {
+    left: 10px;
+    padding-right: 5px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .footer {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+@media (max-width: 805px) {
+  #home {
+    height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .centered button {
+    max-width: 20px;
+    max-height: 25px;
+    font-size: 10px;
+  }
+
+  #previous-year {
+    max-height: 25px;
+    line-height: 10px;
+  }
+
+  #next-year {
+    max-height: 25px;
+    line-height: 10px;
+  }
+
+  .header {
+    top: 0px;
+    left: 0px;
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .date {
+    font-size: 20px;
+  }
+
+  .body {
+    left: 5px;
+    padding-right: 2px;
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .footer {
+    bottom: 0px;
+    left: 2px;
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
